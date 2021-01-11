@@ -1,0 +1,54 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background: url("../images/cover.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__nav {
+        width: 44px;
+        height: 44px;
+        background-color: $color-brand;
+        position: fixed;
+        top: 0;
+        left: 0;
+        &--img {
+            display: block;
+            margin: 14px auto;
+        }
+    }
+    &__title {
+        font-family: $font-title;
+        font-weight: 600;
+        font-size: 42px;
+        text-transform: uppercase;
+        text-align: center;
+        color: $color-bg;
+        margin-bottom: 10px;
+        &--span {
+            display: block;            
+        }
+    }
+    &__subtitle {
+        font-family: $font-text;
+        font-size: 16px;
+        font-weight: 500;
+        color: $color-bg;
+        margin-bottom: 45px;
+    }
+}
+.nav__icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $color-bg;
+    margin-bottom: 53px;
+    display: flex;
+    justify-content: center;
+    // &img {
+        
+    // }
+}
