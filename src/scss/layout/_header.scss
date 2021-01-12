@@ -21,14 +21,28 @@
         }
     }
     &__title {
+        color: $color-bg;
+        margin-bottom: 10px;
+        @include mediaTablet {
+            margin-bottom: 20px;
+        }
+        @include mediaTablet {
+            margin-bottom: 0px;
+        }
         @include robotoBold{
             font-size: 42px;
             line-height: 55px;
+            text-transform: uppercase;
+            text-align: center;
+            @include mediaTablet {
+                font-size: 80px;
+                line-height: 106px;
+            }
+            @include mediaDesktop {
+                font-size: 100px;
+                line-height: 132px;
+            }
         }        
-        text-transform: uppercase;
-        text-align: center;
-        color: $color-bg;
-        margin-bottom: 10px;
         &--span {
             display: block;            
         }
@@ -36,9 +50,15 @@
     &__subtitle {
         @include robotoRegular {
             font-size: 16px;
+            @include mediaTablet {
+                font-size: 24px
+            }
         }
         color: $color-bg;
         margin-bottom: 45px;
+        // @include mediaTablet {
+        //     margin-bottom: 30px;
+        // }
     }
 }
 .nav__icon {
@@ -47,6 +67,12 @@
     border-radius: 50%;
     background-color: $color-bg;
     margin-bottom: 53px;
+    @include mediaTablet {
+        margin-bottom: 45px;
+    }
+    @include mediaDesktop {
+        margin-bottom: 13px;
+    }
     display: flex;
     justify-content: center;
 }

@@ -9,7 +9,6 @@
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, -50%); //translate (x, y) x=0, y=0 es de donde se parte.
-	z-index: 1000;
 }
 .container {
 	&--footer {
@@ -23,7 +22,7 @@
 		}
 		@include mediaDesktop {
 			margin: 0 80px;
-			max-width: 1200px;
+			max-width: 1200px; //Revisar en los iconos de navegación absoluto.
 		}
     }
     &__copyright {
