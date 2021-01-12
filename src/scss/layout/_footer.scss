@@ -1,3 +1,20 @@
 .footer {
-    position: relative;
+    background-color: $dark-brand;
+    color: $color-bg;
+	display: flex;
+	flex-direction: column;
+}
+
+.nav__icon--footer {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $color-bg;
+    margin-bottom: 53px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
 }

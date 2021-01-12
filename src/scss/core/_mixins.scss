@@ -1,0 +1,36 @@
+//Flex
+@mixin flex-absoluteCentered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//Fonts
+@mixin robotoRegular {
+    font-family: $font-text;
+    font-weight: 400;
+    @content;    
+}
+@mixin robotoMedium {
+    font-family: $font-text;
+    font-weight: 500;
+    @content;    
+}
+@mixin robotoBold {
+    font-family: $font-title;
+    font-weight: 600;
+    @content;
+}
+
+//Mediaqueries
+@mixin mediaTablet {
+    @media all and (min-width: $minTablet) {
+      @content;
+    }
+  }
+  
+  @mixin mediaDesktop {
+    @media all and (min-width: $minDesktop) {
+      @content;
+    }
+  }

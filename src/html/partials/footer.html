@@ -1,22 +1,93 @@
 <footer class="footer">
-  <div class="nav__icon">
-    <img src="./assets/images/arrow.svg" alt="" class="nav__icon--img">
-  </div>
-  <nav class="footer__nav--content">
-    <ul class="footer__list">
-      <li class="footer__list--item"><a href="https://adalab.es" target="_blank" class="footer__list--link" >Articles</a></li>
-      <li class="footer__list--item"><a href="https://adalab.es" target="_blank" class="footer__list--link">Books</a></li>
-      <li class="footer__list--item"><a href="https://adalab.es" target="_blank" class="footer__list--link">Events</a></li>
-      <li class="footer__list--item"><a href="https://adalab.es" target="_blank" class="footer__list--link">Reasons</a></li>
-      <li class="footer__list--item"><a href="https://adalab.es" target="_blank" class="footer__list--link">Tips</a></li>
-  </ul>
-</nav>
-  <nav class="footer__nav--media">
-    <ul class="footer__list">
-      <li class="footer__list--item">Twitter</li>
-      <li class="footer__list--item">Instagram</li>
-      <li class="footer__list--item">Mastodon.social</li>
-    </ul>
-</nav>
-<small class="footer--copyright"> &copy; 2021 </small> <span class="footer__span">we ❤︎ components</span>
+	<a href="#top" class="link--internal">
+		<div class="nav__icon--footer">
+			<img src="./assets/images/ico-arrow.svg" alt="Icono footer" class="nav__icon--img" />
+		</div>
+	</a>
+	<div class="container">
+		<nav class="footer__nav--content">
+			<ul class="footer__list">
+				<li class="footer__list--item">
+					<include
+						src="./link.html"
+						url="https://adalab.es/"
+						aClass="footer__list--link"
+						text="Articles"
+						target="_blank"
+					></include>
+				</li>
+				<li class="footer__list--item">
+					<include
+						src="./link.html"
+						url="https://adalab.es/"
+						aClass="footer__list--link"
+						text="Books"
+						target="_blank"
+					></include>
+				</li>
+				<li class="footer__list--item">
+					<include
+						src="./link.html"
+						url="https://adalab.es/"
+						aClass="footer__list--link"
+						text="Event"
+						target="_blank"
+					></include>
+				</li>
+				<li class="footer__list--item">
+					<include
+						src="./link.html"
+						url="https://adalab.es/"
+						aClass="footer__list--link"
+						text="Reasons"
+						target="_blank"
+					></include>
+				</li>
+				<li class="footer__list--item">
+					<include
+						src="./link.html"
+						url="https://adalab.es/"
+						aClass="footer__list--link"
+						text="Tips"
+						target="_blank"
+					></include>
+				</li>
+			</ul>
+		</nav>
+		<nav class="footer__nav--media">
+			<ul class="footer__list">
+				<li class="footer__list--item">
+					<include
+						src="./link.html"
+						url="https://adalab.es/"
+						aClass="footer__list--link"
+						text="Twitter"
+						target="_blank"
+					></include>
+				</li>
+				<li class="footer__list--item">
+					<include
+						src="./link.html"
+						url="https://adalab.es/"
+						aClass="footer__list--link"
+						text="Instagram"
+						target="_blank"
+					></include>
+				</li>
+				<li class="footer__list--item">
+					<include
+						src="./link.html"
+						url="https://adalab.es/"
+						aClass="footer__list--link"
+						text="Mastodon.social"
+						target="_blank"
+					></include>
+				</li>
+			</ul>
+		</nav>
+		<div class="container-copyright">
+			<small class="footer--copyright"> &copy; 2021 </small>
+			<span class="footer__span">we <span class="footer__span--icon">❤︎</span> components</span>
+		</div>
+	</div>
 </footer>
