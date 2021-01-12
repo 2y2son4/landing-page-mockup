@@ -44,8 +44,9 @@
 			transition: transform $trans-bt, color $trans-bt, border $trans-bt;
 			&:hover {
 				transform: scale(1.2);
-				color: darken($deco-brand, 100%);
-				border: 2px darken($deco-brand, 100%) solid;
+				color: $color-bg;
+				background-color: $dark-brand;
+				border: 2px $dark-brand solid;
 			}
 			@include mediaTablet {
 				width: 91px;
@@ -83,10 +84,12 @@
 			}
 			padding-top: 30px;
 			@include mediaTablet {
+				@include sizeHeight(26px, 45px);
 				grid-area: title;
 				margin-top: 0;
 			}
 			@include mediaDesktop {
+				font-size: 32px;
 				padding-top: 60px;
 			}
 		}
@@ -97,7 +100,7 @@
 			color: $color-text;
 			margin-top: 15px;
 			@include mediaTablet {
-				@include sizeHeight(20px, 30px);
+				font-size: 20px;
 				margin-top: 30px;
 			}
 		}
@@ -111,9 +114,12 @@
 			border-radius: 22.5px;
 			transform: scale(1);
 			transition: transform $trans-bt, background-color $trans-bt;
+			border: 2px $deco-brand solid;
 			&:hover {
 				transform: scale(1.2);
-				background-color: darken($deco-brand, 100%);
+				background-color: $color-bg;
+				color: $dark-brand;
+				border: 2px $dark-brand solid;
 			}
 			margin: 45px auto 60px;
 			@include robotoMedium {
@@ -138,6 +144,7 @@
 			text-align: center;
 		}
 		@include mediaTablet {
+			font-size: 24px;
 			margin-left: 0;
 			margin-right: 0;
 		}
@@ -152,8 +159,8 @@
 			text-align: center;
 		}
 		@include mediaTablet {
-			margin-right: 20px;
-			margin-left: 20px;
+			font-size: 20px;
+			margin: 0 20px;
 		}
 	}
 	&-1 {

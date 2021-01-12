@@ -10,7 +10,7 @@
 	transform: translate(-50%, -50%); //translate (x, y) x=0, y=0 es de donde se parte.
 }
 .up:hover {
-	animation: up 0.8s 6;
+	animation: up 0.8s 3;
 }
 @keyframes up {
 	0% {
@@ -21,7 +21,7 @@
 	}
 }
 .container {
-	&--footer {
+	&-footer {
 		margin: 0 15px;
 		@include flexCenter;
 		flex-direction: column;
@@ -69,21 +69,19 @@
 			padding-top: 60px;
 			@include mediaTablet {
 				padding-top: 0;
-				margin-top: 45px;
-				margin-bottom: 45px;
+				margin: 45px 0;
 				align-items: flex-start;
 			}
 		}
 		&--media {
-			padding-top: 45px;
+			margin-top: 30px;
 			@include mediaTablet {
-				padding-top: 0;
-				margin-top: 45px;
+				margin-top: 45px;				
 				align-items: flex-start;
 			}
 		}
 		&--link {
-			padding: 5px 20px;
+			padding: 5px 20px; //Mejor UX.
 			&:hover {
 				transition: color $trans-bt;
 				color: $deco-brand;
