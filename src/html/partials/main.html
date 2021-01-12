@@ -11,8 +11,8 @@
 		</div>
 	</section>
 	<section class="main__section--purchase">
-      <div class="container">
-			<h2 id="reasons" class="main__section--title">3 Reasons To Purchase</h2>
+      <div class="container--grid">
+			<h2 id="reasons" class="main__section--title-center">3 Reasons To Purchase</h2>
 			<include
 				src="./articles_reasons.html"
 				h3Article="Ut sed metus"
@@ -22,8 +22,12 @@
 				h3Article="Curabitur ac erat"
 				pArticle="Mauris mattis urna quis lorem molestie."
 			></include>
-			<include src="./articles_reasons.html" h3Article="Morbi dictum" pArticle="Aliquam in dolor et dolor tincidunt."></include>
-			<button class="main__section--purchase-button">More reasons</button>
+			<include 
+				src="./articles_reasons.html" 
+				h3Article="Morbi dictum" 
+				pArticle="Aliquam in dolor et dolor tincidunt.">
+			</include>
+			<button class="main__section--purchase-button"><include src="./link.html" url="https://adalab.es/" aClass="footer__list--link" text="More reasons" target="_blank"></include></button>
     </div>
     </section>	
 </main>

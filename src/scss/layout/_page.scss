@@ -8,6 +8,24 @@
         max-width: 1200px;
     }
 }
+.container--grid {
+    margin: 0 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr 1fr 1fr 1fr ;
+    grid-template-areas: "title" "reason1" "reason2" "reason3" "buttonMore";    
+    @include mediaTablet {
+        margin: 0 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 75px 1fr 165px;
+        grid-template-areas: "title title title" "reason1 reason2 reason3" "buttonMore buttonMore buttonMore";
+    }
+    @include mediaDesktop {
+        margin: 0 80px;
+        max-width: 1200px;
+    } 
+}
 .main__section{
     &--tips {
         background-color: $color-bg;
@@ -38,6 +56,22 @@
             }
             margin-top: 30px;
         }
+        &-center {
+            @include robotoBold {
+                font-size: 24px;
+                line-height: 30px;
+                text-align: center;
+            }
+            padding-top: 30px;
+            @include mediaTablet {
+                grid-area: title;
+                margin-top: 0;
+                padding-top: 40px;              
+            }
+            @include mediaDesktop {
+                padding-top: 60px;              
+            }
+        }
     }
     &--paragraph {
         @include robotoRegular {
@@ -49,6 +83,48 @@
     }
     &--purchase {
         background-color: $color-bg-2;
+        &-button {
+            width: 184px;
+            height: 45px;
+            background-color: $icons-brand;            
+            border-radius: 22.5px;
+            margin: 45px auto 60px;
+            @include robotoMedium {
+                font-size: 20px;
+                line-height: 45px;
+                color: $color-bg ;
+            }
+            @include mediaTablet {                
+                grid-area: buttonMore;
+                margin-top: 60px;
+            }
+        }
+    }    
+}
+
+.main__article {
+    &--title {
+        margin: 45px 68px 0;        
+        @include robotoBold {
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+        }
+        @include mediaTablet {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
     }
-    
+    &--paragraph {
+        margin: 0 70px;
+        @include robotoRegular {
+            @include articleText;
+        }
+        @include mediaTablet {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+    }
+
 }
