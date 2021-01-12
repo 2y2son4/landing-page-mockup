@@ -1,119 +1,97 @@
 .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    height: 100vh;
-    background: url("../images/cover.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    &__nav {
-        width: 44px;
-        height: 44px;
-        background-color: $color-brand;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &__title {
-        color: $color-bg;
-        margin-bottom: 10px;
-        @include mediaTablet {
-            margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	height: 100vh;
+	background: url("../images/cover.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+	&__nav {
+		width: 44px;
+		height: 44px;
+		background-color: $color-brand;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		@include flexCenter;
+	}
+	&__img {
+		transition: transform $trans-bt;
+		&:hover {
+			transform: rotate(360deg);
+		}
+	}
+	&__title {
+		color: $color-bg;
+		margin-bottom: 10px;
+		@include mediaTablet {
+			margin-bottom: 20px;
+		}
+		@include mediaDesktop {
+			margin-bottom: 0px;
+		}
+		@include robotoBold {
+			@include sizeHeight(42px, 55px);
+			text-transform: uppercase;
+			text-align: center;
+			@include mediaTablet {
+				@include sizeHeight(80px, 106px);
+			}
+			@include mediaDesktop {
+				@include sizeHeight(100px, 132px);
+			}
+		}
+		&--span {
+			display: block;
+		}
+	}
+	&__subtitle {
+		@include robotoRegular {
+			font-size: 16px;
         }
-        @include mediaTablet {
-            margin-bottom: 0px;
-        }
-        @include robotoBold{
-            font-size: 42px;
-            line-height: 55px;
-            text-transform: uppercase;
-            text-align: center;
-            @include mediaTablet {
-                font-size: 80px;
-                line-height: 106px;
-            }
-            @include mediaDesktop {
-                font-size: 100px;
-                line-height: 132px;
-            }
-        }        
-        &--span {
-            display: block;            
-        }
-    }
-    &__subtitle {
-        @include robotoRegular {
-            font-size: 16px;
-            @include mediaTablet {
-                font-size: 24px
-            }
-        }
-        color: $color-bg;
+		color: $color-bg;
         margin-bottom: 45px;
-        // @include mediaTablet {
-        //     margin-bottom: 30px;
-        // }
-    }
+        @include mediaTablet {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+	}
 }
 .nav__icon {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: $color-bg;
-    margin-bottom: 53px;
-    @include mediaTablet {
-        margin-bottom: 45px;
-    }
-    @include mediaDesktop {
-        margin-bottom: 13px;
-    }
+	width: 45px;
+	height: 45px;
+	@include flexCenter;
+	border-radius: 50%;
+	background-color: $color-bg;
+	margin-bottom: 53px;
+	@include mediaTablet {
+		margin-bottom: 45px;
+	}
+	@include mediaDesktop {
+		margin-bottom: 13px;
+	}
 }
 .--down {
-    animation: down 1s 6;
-    &:hover {
-        animation: downHover 1s 6;
-    }
+	animation: down 0.8s 6;
+	&:hover {
+		animation: downHover 0.8s 3;
+	}
 }
 @keyframes down {
-    0% {
-		transform: translateY(2px);
-	}
-	25% {
-		transform: translateY(4px);
-	}
-	50% {
-		transform: translateY(6px);
-    }
-    75% {
-		transform: translateY(8px);
+	0% {
+		transform: translateY(0);
 	}
 	100% {
-		transform: translateY(10px);
+		transform: translateY(15px);
 	}
 }
 @keyframes downHover {
-    0% {
-		transform: translateY(2px);
-	}
-	25% {
-		transform: translateY(4px);
-	}
-	50% {
-		transform: translateY(6px);
-    }
-    75% {
-		transform: translateY(8px);
+	0% {
+		transform: translateY(0);
 	}
 	100% {
-		transform: translateY(10px);
+		transform: translateY(15px);
 	}
 }
-

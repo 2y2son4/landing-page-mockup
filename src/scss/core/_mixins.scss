@@ -14,10 +14,18 @@
     font-weight: 600;
     @content;
 }
-@mixin articleText {
-  font-size: 18px;
-  line-height: 30px;
-  text-align: center;
+
+//text function
+@mixin sizeHeight($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+//flex
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 //Mediaqueries

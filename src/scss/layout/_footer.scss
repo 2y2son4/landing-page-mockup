@@ -4,94 +4,81 @@
 	border-radius: 50%;
 	background-color: $color-bg;
 	margin-bottom: 53px;
-	display: flex;
-	justify-content: center;
+	@include flexCenter;
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, -50%); //translate (x, y) x=0, y=0 es de donde se parte.
 }
 .up:hover {
-	animation: up 1s 6;
+	animation: up 0.8s 6;
 }
 @keyframes up {
 	0% {
-		transform: translateY(-5px);
+		transform: translateY(0);
 	}
-
-	50% {
-		transform: translateY(-10px);
-	}
-
 	100% {
-		transform: translateY(-15px);
+		transform: translateY(-20px);
 	}
-
 }
 .container {
 	&--footer {
 		margin: 0 15px;
-		display: flex;
+		@include flexCenter;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 		@include mediaTablet {
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: flex-start;
-			margin: 0 40px;		
+			margin: 0 40px;
 		}
 		@include mediaDesktop {
 			margin: 0 370px;
 		}
-    }
-    &__copyright {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        display: flex;
-        flex-direction: column;
+	}
+	&__copyright {
+		margin-top: 30px;
+		margin-bottom: 45px;
+		display: flex;
+		flex-direction: column;
 		text-align: center;
 		@include mediaTablet {
 			margin-top: 45px;
 			order: -1;
 		}
-    }
+	}
 }
-.copyright {    
-    &__small {
-        font-size: 14px;
-        line-height: 30px;
-        &--icon {
-            color: $icons-brand;
-        }
-    }
+.copyright {
+	&__small {
+		@include sizeHeight(14px, 30px);
+		&--icon {
+			color: $deco-brand;
+		}
+	}
 }
 .footer {
 	background-color: $dark-brand;
 	color: $color-bg;
 	@include robotoRegular {
-		font-size: 16px;
-		line-height: 30px;
+		@include sizeHeight(16px, 30px);
 	}
 	&__list {
 		text-transform: uppercase;
-		display: flex;
+		@include flexCenter;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 		&--content {
 			padding-top: 60px;
 			@include mediaTablet {
-				padding-top: 0;	
+				padding-top: 0;
 				margin-top: 45px;
-				margin-bottom: 45px;			
+				margin-bottom: 45px;
 				align-items: flex-start;
 			}
 		}
 		&--media {
 			padding-top: 45px;
 			@include mediaTablet {
-				padding-top: 0;	
-				margin-top: 45px;			
+				padding-top: 0;
+				margin-top: 45px;
 				align-items: flex-start;
 			}
 		}
@@ -99,7 +86,7 @@
 			padding: 5px 20px;
 			&:hover {
 				transition: color $trans-bt;
-				color: $icons-brand;
+				color: $deco-brand;
 			}
 		}
 	}
