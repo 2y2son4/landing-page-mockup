@@ -95,9 +95,12 @@
 				align-items: flex-start;
 			}
 		}
-		&--item:hover {
-			transition: color $trans-bt;
-			color: $icons-brand;
+		&--link {
+			padding: 5px 20px;
+			&:hover {
+				transition: color $trans-bt;
+				color: $icons-brand;
+			}
 		}
 	}
 }

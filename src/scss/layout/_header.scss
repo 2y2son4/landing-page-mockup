@@ -76,4 +76,44 @@
         margin-bottom: 13px;
     }
 }
+.--down {
+    animation: down 1s 6;
+    &:hover {
+        animation: downHover 1s 6;
+    }
+}
+@keyframes down {
+    0% {
+		transform: translateY(2px);
+	}
+	25% {
+		transform: translateY(4px);
+	}
+	50% {
+		transform: translateY(6px);
+    }
+    75% {
+		transform: translateY(8px);
+	}
+	100% {
+		transform: translateY(10px);
+	}
+}
+@keyframes downHover {
+    0% {
+		transform: translateY(2px);
+	}
+	25% {
+		transform: translateY(4px);
+	}
+	50% {
+		transform: translateY(6px);
+    }
+    75% {
+		transform: translateY(8px);
+	}
+	100% {
+		transform: translateY(10px);
+	}
+}
 
