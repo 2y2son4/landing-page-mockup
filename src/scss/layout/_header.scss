@@ -63,6 +63,9 @@
 .nav__icon {
     width: 45px;
     height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     background-color: $color-bg;
     margin-bottom: 53px;
@@ -72,7 +75,5 @@
     @include mediaDesktop {
         margin-bottom: 13px;
     }
-    display: flex;
-    justify-content: center;
 }
 
