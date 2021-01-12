@@ -13,7 +13,7 @@
 }
 @mixin robotoMedium {
     font-family: $font-text;
-    font-weight: 500;
+    font-weight: normal;
     @content;    
 }
 @mixin robotoBold {
