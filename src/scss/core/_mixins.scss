@@ -1,10 +1,3 @@
-//Flex
-// @mixin flex-absoluteCentered {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-
 //Fonts
 @mixin robotoRegular {
     font-family: $font-text;
@@ -13,7 +6,7 @@
 }
 @mixin robotoMedium {
     font-family: $font-text;
-    font-weight: normal;
+    font-weight: 500;
     @content;    
 }
 @mixin robotoBold {

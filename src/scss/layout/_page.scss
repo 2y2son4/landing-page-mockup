@@ -21,7 +21,8 @@
         grid-template-areas: "title title title" "reason1 reason2 reason3" "buttonMore buttonMore buttonMore";
     }
     @include mediaDesktop {
-        margin: 0 80px;    
+        margin: 0 auto;
+        max-width: 1200px;   
     } 
 }
 .main__section{
@@ -34,6 +35,13 @@
             border: 2px $icons-brand solid;
             border-radius: 22.5px;
             margin: 30px 0 45px;
+            transform: scale(1);
+            transition: transform $trans-bt, color $trans-bt, border $trans-bt;           
+            &:hover {
+            transform: scale(1.2);
+            color: darken($icons-brand, 100%);
+            border: 2px darken($icons-brand, 100%) solid;       
+            }
             @include mediaTablet {
                 width: 160px;
                 margin-bottom: 60px;
@@ -103,6 +111,12 @@
             height: 45px;
             background-color: $icons-brand;            
             border-radius: 22.5px;
+            transform: scale(1);
+            transition: transform $trans-bt, background-color $trans-bt;           
+            &:hover {
+            transform: scale(1.2);
+            background-color: darken($icons-brand, 100%);         
+            }
             margin: 45px auto 60px;
             @include robotoMedium {
                 font-size: 20px;
