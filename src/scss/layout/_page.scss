@@ -1,10 +1,10 @@
-.container {
+.container--insomnia {
     margin: 0 15px;
     @include mediaTablet {
         margin: 0 40px;
     }
     @include mediaDesktop {
-        margin: 0 80px;
+        margin: 0 275px;
         max-width: 1200px;
     }
 }
@@ -36,6 +36,10 @@
             border: 2px $icons-brand solid;
             border-radius: 22.5px;
             margin: 30px 0 45px;
+            @include mediaTablet {
+                width: 160px;
+                margin-bottom: 60px;
+            }
             @include robotoMedium {
                 font-size: 20px;
                 line-height: 45px;
@@ -47,12 +51,22 @@
         @include robotoBold {
             font-size: 24px;
             line-height: 30px;
+            @include mediaTablet {
+                font-size: 26px;
+                line-height: 45px;
+            }
+            @include mediaDesktop {
+                font-size: 32px;
+            }
         }
         &-small {
             @include robotoRegular {
                 font-size: 14px;
                 line-height: 30px;
                 color: $light-brand;
+                @include mediaDesktop {
+                    font-size: 16px;
+                }
             }
             margin-top: 30px;
         }
@@ -79,6 +93,9 @@
             line-height: 30px;
             color: $color-text;
             margin-top: 15px;
+            @include mediaTablet {
+                margin-top: 30px;
+            }
         }
     }
     &--purchase {
@@ -92,11 +109,10 @@
             @include robotoMedium {
                 font-size: 20px;
                 line-height: 45px;
-                color: $color-bg ;
+                color: $color-bg;
             }
             @include mediaTablet {                
                 grid-area: buttonMore;
-                margin-top: 60px;
             }
         }
     }    
