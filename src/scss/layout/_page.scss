@@ -5,7 +5,6 @@
     }
     @include mediaDesktop {
         margin: 0 275px;
-        max-width: 1200px;
     }
 }
 .container--grid {
@@ -22,8 +21,7 @@
         grid-template-areas: "title title title" "reason1 reason2 reason3" "buttonMore buttonMore buttonMore";
     }
     @include mediaDesktop {
-        margin: 0 80px;
-        max-width: 1200px;
+        margin: 0 80px;    
     } 
 }
 .main__section{
@@ -111,8 +109,12 @@
                 line-height: 45px;
                 color: $color-bg;
             }
-            @include mediaTablet {                
+            @include mediaTablet { 
+                width: 210px;               
                 grid-area: buttonMore;
+            }
+            @include mediaDesktop {
+                width: 255px;
             }
         }
     }    
