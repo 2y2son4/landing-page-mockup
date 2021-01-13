@@ -1,5 +1,5 @@
 .main {
-	&__container{
+	&__container {
 		&--insomnia {
 			margin: 0 15px;
 			@include mediaTablet {
@@ -134,7 +134,7 @@
 				margin-top: 30px;
 			}
 		}
-	}	
+	}
 	&__article {
 		&--title {
 			margin: 45px 68px 0;
@@ -169,6 +169,6 @@
 		background-color: $color-bg;
 	}
 	&-purchase {
-		background-color: $color-bg-2;		
+		background-color: $color-bg-2;
 	}
 }

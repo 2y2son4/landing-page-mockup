@@ -1,4 +1,4 @@
-//Fonts
+// fonts
 @mixin robotoRegular {
 	font-family: $font-text;
 	font-weight: 400;
@@ -15,20 +15,20 @@
 	@content;
 }
 
-//text function
+// text function
 @mixin sizeLine($fontSize, $lineHeight) {
 	font-size: $fontSize;
 	line-height: $lineHeight;
 }
 
-//flex
+// flex
 @mixin flexCenter {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-//Mediaqueries
+// mediaqueries
 @mixin mediaTablet {
 	@media all and (min-width: 768px) {
 		@content;
