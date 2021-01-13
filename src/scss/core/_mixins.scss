@@ -1,42 +1,42 @@
 //Fonts
 @mixin robotoRegular {
-    font-family: $font-text;
-    font-weight: 400;
-    @content;    
+	font-family: $font-text;
+	font-weight: 400;
+	@content;
 }
 @mixin robotoMedium {
-    font-family: $font-text;
-    font-weight: 500;
-    @content;    
+	font-family: $font-text;
+	font-weight: 500;
+	@content;
 }
 @mixin robotoBold {
-    font-family: $font-title;
-    font-weight: 600;
-    @content;
+	font-family: $font-title;
+	font-weight: 600;
+	@content;
 }
 
 //text function
 @mixin sizeLine($fontSize, $lineHeight) {
-  font-size: $fontSize;
-  line-height: $lineHeight;
+	font-size: $fontSize;
+	line-height: $lineHeight;
 }
 
 //flex
 @mixin flexCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 //Mediaqueries
 @mixin mediaTablet {
-    @media all and (min-width: 768px) {
-      @content;
-    }
-  }
-  
-  @mixin mediaDesktop {
-    @media all and (min-width: 1200px) {
-      @content;
-    }
-  }
+	@media all and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin mediaDesktop {
+	@media all and (min-width: 1200px) {
+		@content;
+	}
+}

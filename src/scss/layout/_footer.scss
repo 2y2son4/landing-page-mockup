@@ -8,7 +8,6 @@
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, -50%); //translate (x, y) x=0, y=0 es de donde se parte.
-	
 }
 .up:hover {
 	animation: up 1.6s 3;
@@ -27,8 +26,8 @@
 		transform: translateY(-20px);
 	}
 }
-.container {
-	&-footer {
+.footer {
+	&__container {
 		margin: 0 15px;
 		@include flexCenter;
 		flex-direction: column;
@@ -39,7 +38,8 @@
 			margin: 0 40px;
 		}
 		@include mediaDesktop {
-			margin: 0 370px;
+			max-width: 1024px;
+			margin: 0 auto;
 		}
 	}
 	&__copyright {
@@ -52,17 +52,13 @@
 			margin-top: 45px;
 			order: -1;
 		}
-	}
-}
-.copyright {
-	&__small {
-		@include sizeLine(14px, 30px);
+		&--small {
+			@include sizeLine(14px, 30px);
+		}
 		&--icon {
 			color: $deco-brand;
 		}
 	}
-}
-.footer {
 	background-color: $dark-brand;
 	color: $color-bg;
 	@include robotoRegular {
@@ -83,7 +79,7 @@
 		&--media {
 			margin-top: 30px;
 			@include mediaTablet {
-				margin-top: 45px;				
+				margin-top: 45px;
 				align-items: flex-start;
 			}
 		}
