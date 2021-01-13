@@ -25,17 +25,17 @@
 		color: $color-bg;
 		margin-bottom: 10px;
 		@include robotoBold {
-			@include sizeHeight(42px, 55px);
+			@include sizeLine(42px, 55px);
 			text-transform: uppercase;
 			text-align: center;
 		}
 		@include mediaTablet {
 			margin-bottom: 20px;
-			@include sizeHeight(80px, 106px);
+			@include sizeLine(80px, 106px);
 		}
 		@include mediaDesktop {
 			margin-bottom: 0px;
-			@include sizeHeight(100px, 132px);
+			@include sizeLine(100px, 132px);
 		}
 		&--span {
 			display: block;

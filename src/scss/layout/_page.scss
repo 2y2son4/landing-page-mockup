@@ -33,7 +33,7 @@
 			width: 76px;
 			height: 45px;
 			@include robotoMedium {
-				@include sizeHeight(20px, 45px);
+				@include sizeLine(20px, 45px);
 				color: $deco-brand;
 			}
 			background-color: $color-bg;
@@ -59,9 +59,9 @@
 	}
 	&--title {
 		@include robotoBold {
-			@include sizeHeight(24px, 30px);
+			@include sizeLine(24px, 30px);
 			@include mediaTablet {
-				@include sizeHeight(26px, 45px);
+				@include sizeLine(26px, 45px);
 			}
 			@include mediaDesktop {
 				font-size: 32px;
@@ -69,7 +69,7 @@
 		}
 		&-small {
 			@include robotoRegular {
-				@include sizeHeight(14px, 30px);
+				@include sizeLine(14px, 30px);
 				color: $light-brand;
 				@include mediaDesktop {
 					font-size: 16px;
@@ -79,12 +79,12 @@
 		}
 		&-center {
 			@include robotoBold {
-				@include sizeHeight(24px, 30px);
+				@include sizeLine(24px, 30px);
 				text-align: center;
 			}
 			padding-top: 30px;
 			@include mediaTablet {
-				@include sizeHeight(26px, 45px);
+				@include sizeLine(26px, 45px);
 				grid-area: title;
 				margin-top: 0;
 			}
@@ -96,7 +96,7 @@
 	}
 	&--paragraph {
 		@include robotoRegular {
-			@include sizeHeight(18px, 30px);
+			@include sizeLine(18px, 30px);
 			color: $color-text;
 			margin-top: 15px;
 			@include mediaTablet {
@@ -123,7 +123,7 @@
 			}
 			margin: 45px auto 60px;
 			@include robotoMedium {
-				@include sizeHeight(20px, 45px);
+				@include sizeLine(20px, 45px);
 				color: $color-bg;
 			}
 			@include mediaTablet {
@@ -140,7 +140,7 @@
 	&--title {
 		margin: 45px 68px 0;
 		@include robotoBold {
-			@include sizeHeight(18px, 30px);
+			@include sizeLine(18px, 30px);
 			text-align: center;
 		}
 		@include mediaTablet {
@@ -155,7 +155,7 @@
 	&--paragraph {
 		margin: 0 70px;
 		@include robotoRegular {
-			@include sizeHeight(18px, 30px);
+			@include sizeLine(18px, 30px);
 			text-align: center;
 		}
 		@include mediaTablet {
