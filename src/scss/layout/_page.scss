@@ -81,10 +81,11 @@
 			@include mediaTablet {
 				width: 210px;
 				grid-area: button;
-				margin-top: 60px;
+				margin-top: 60px
 			}
 			@include mediaDesktop {
 				width: 255px;
+				
 			}
 		}
 	}

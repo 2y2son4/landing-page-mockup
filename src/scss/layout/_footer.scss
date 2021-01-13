@@ -35,12 +35,10 @@
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: flex-start;
-			margin: 0 40px;
-		}
-		@include mediaDesktop {
-			max-width: 1024px;
 			margin: 0 auto;
+			max-width: 600px;
 		}
+
 	}
 	&__copyright {
 		margin-top: 30px;
@@ -69,9 +67,10 @@
 		@include flexCenter;
 		flex-direction: column;
 		&--content {
-			margin-top: 60px;
-			@include mediaTablet {				
-				margin: 45px 0;
+			padding-top: 60px;
+			@include mediaTablet {
+				padding-top: 0;
+				margin: 45px;
 				align-items: flex-start;
 			}
 		}
