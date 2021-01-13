@@ -16,7 +16,7 @@
 }
 
 //text function
-@mixin sizeHeight($fontSize, $lineHeight) {
+@mixin sizeLine($fontSize, $lineHeight) {
   font-size: $fontSize;
   line-height: $lineHeight;
 }

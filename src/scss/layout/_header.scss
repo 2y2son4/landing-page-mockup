@@ -24,22 +24,18 @@
 	&__title {
 		color: $color-bg;
 		margin-bottom: 10px;
+		@include robotoBold {
+			@include sizeLine(42px, 55px);
+			text-transform: uppercase;
+			text-align: center;
+		}
 		@include mediaTablet {
 			margin-bottom: 20px;
+			@include sizeLine(80px, 106px);
 		}
 		@include mediaDesktop {
 			margin-bottom: 0px;
-		}
-		@include robotoBold {
-			@include sizeHeight(42px, 55px);
-			text-transform: uppercase;
-			text-align: center;
-			@include mediaTablet {
-				@include sizeHeight(80px, 106px);
-			}
-			@include mediaDesktop {
-				@include sizeHeight(100px, 132px);
-			}
+			@include sizeLine(100px, 132px);
 		}
 		&--span {
 			display: block;
@@ -48,13 +44,13 @@
 	&__subtitle {
 		@include robotoRegular {
 			font-size: 16px;
-        }
+		}
 		color: $color-bg;
-        margin-bottom: 45px;
-        @include mediaTablet {
-            font-size: 24px;
-            margin-bottom: 30px;
-        }
+		margin-bottom: 45px;
+		@include mediaTablet {
+			font-size: 24px;
+			margin-bottom: 30px;
+		}
 	}
 }
 .nav__icon {
@@ -70,11 +66,11 @@
 	@include mediaDesktop {
 		margin-bottom: 13px;
 	}
-}
-.--down {
-	animation: down 1.6s 3;
-	&:hover {
-		animation: downHover 1.6s 2;
+	&--down {
+		animation: down 1.6s 2;
+		&:hover {
+			animation: downHover 1.6s 1;
+		}
 	}
 }
 @keyframes down {
