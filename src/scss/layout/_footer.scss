@@ -69,9 +69,8 @@
 		@include flexCenter;
 		flex-direction: column;
 		&--content {
-			padding-top: 60px;
-			@include mediaTablet {
-				padding-top: 0;
+			margin-top: 60px;
+			@include mediaTablet {				
 				margin: 45px 0;
 				align-items: flex-start;
 			}

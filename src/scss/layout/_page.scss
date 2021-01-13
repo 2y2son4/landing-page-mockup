@@ -20,7 +20,7 @@
 				margin: 0 40px;
 				display: grid;
 				grid-template-columns: 1fr 1fr 1fr;
-				grid-template-rows: 75px 1fr 150px;
+				grid-template-rows: 75px 1fr 165px;
 				grid-template-areas: "title title title" "reason1 reason2 reason3" "button button button";
 			}
 			@include mediaDesktop {
@@ -81,6 +81,7 @@
 			@include mediaTablet {
 				width: 210px;
 				grid-area: button;
+				margin-top: 60px;
 			}
 			@include mediaDesktop {
 				width: 255px;
@@ -101,26 +102,26 @@
 			@include robotoRegular {
 				@include sizeLine(14px, 30px);
 				color: $light-brand;
-				@include mediaDesktop {
-					font-size: 16px;
-				}
 			}
 			margin-top: 30px;
+			@include mediaDesktop {
+				margin-top: 60px;
+				font-size: 16px;
+			}
 		}
 		&--center {
 			@include robotoBold {
 				@include sizeLine(24px, 30px);
 				text-align: center;
 			}
-			padding-top: 30px;
+			margin-top: 30px;
 			@include mediaTablet {
 				@include sizeLine(26px, 45px);
-				grid-area: title;
-				margin-top: 0;
+				grid-area: title;				
 			}
 			@include mediaDesktop {
 				font-size: 32px;
-				padding-top: 60px;
+				margin-top: 60px;
 			}
 		}
 	}
@@ -137,7 +138,7 @@
 	}
 	&__article {
 		&--title {
-			margin: 45px 68px 0;
+			margin-top: 45px;
 			@include robotoBold {
 				@include sizeLine(18px, 30px);
 				text-align: center;
