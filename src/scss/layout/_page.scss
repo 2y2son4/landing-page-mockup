@@ -1,32 +1,32 @@
-.container--insomnia {
-	margin: 0 15px;
-	@include mediaTablet {
-		margin: 0 40px;
-	}
-	@include mediaDesktop {
-		margin: 0 275px;
-	}
-}
-.container--grid {
-	margin: 0 15px;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 70px 1fr 1fr 1fr 150px;
-	grid-template-areas: "title" "reason1" "reason2" "reason3" "button";
-	@include mediaTablet {
-		margin: 0 40px;
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 75px 1fr 165px;
-		grid-template-areas: "title title title" "reason1 reason2 reason3" "button button button";
-	}
-	@include mediaDesktop {
-		margin: 0 auto;
-		grid-template-rows: 150px 1fr 165px;
-		max-width: 1200px;
-	}
-}
 .main {
+	&__container--insomnia {
+		margin: 0 15px;
+		@include mediaTablet {
+			margin: 0 40px;
+		}
+		@include mediaDesktop {
+			margin: 0 275px;
+		}
+	}
+	&__container--grid {
+		margin: 0 15px;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 70px 1fr 1fr 1fr 150px;
+		grid-template-areas: "title" "reason1" "reason2" "reason3" "button";
+		@include mediaTablet {
+			margin: 0 40px;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 75px 1fr 165px;
+			grid-template-areas: "title title title" "reason1 reason2 reason3" "button button button";
+		}
+		@include mediaDesktop {
+			margin: 0 auto;
+			grid-template-rows: 150px 1fr 165px;
+			max-width: 1200px;
+		}
+	}
 	&--tips {
 		background-color: $color-bg;
 		&-button {
