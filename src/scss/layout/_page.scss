@@ -20,7 +20,7 @@
 				margin: 0 40px;
 				display: grid;
 				grid-template-columns: 1fr 1fr 1fr;
-				grid-template-rows: 75px 1fr 150px;
+				grid-template-rows: 75px 1fr 165px;
 				grid-template-areas: "title title title" "reason1 reason2 reason3" "button button button";
 			}
 			@include mediaDesktop {
@@ -81,9 +81,11 @@
 			@include mediaTablet {
 				width: 210px;
 				grid-area: button;
+				margin-top: 60px
 			}
 			@include mediaDesktop {
 				width: 255px;
+				
 			}
 		}
 	}
