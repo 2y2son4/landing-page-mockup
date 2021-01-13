@@ -6,7 +6,8 @@
 				margin: 0 40px;
 			}
 			@include mediaDesktop {
-				margin: 0 275px;
+				margin: 0 auto;
+				max-width: 1024px;
 			}
 		}
 		&--grid {
