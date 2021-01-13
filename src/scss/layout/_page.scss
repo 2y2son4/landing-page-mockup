@@ -29,9 +29,9 @@
 			}
 		}
 	}
-	&__tips {
+	&__button {
 		background-color: $color-bg;
-		&--button {
+		&--tips {
 			width: 76px;
 			height: 45px;
 			@include robotoMedium {
@@ -58,58 +58,7 @@
 				width: 160px;
 			}
 		}
-	}
-	&__title {
-		@include robotoBold {
-			@include sizeLine(24px, 30px);
-			@include mediaTablet {
-				@include sizeLine(26px, 45px);
-			}
-			@include mediaDesktop {
-				font-size: 32px;
-			}
-		}
-		&--small {
-			@include robotoRegular {
-				@include sizeLine(14px, 30px);
-				color: $light-brand;
-				@include mediaDesktop {
-					font-size: 16px;
-				}
-			}
-			margin-top: 30px;
-		}
-		&--paragraph {
-			@include robotoRegular {
-				@include sizeLine(18px, 30px);
-				color: $color-text;
-				margin-top: 15px;
-				@include mediaTablet {
-					font-size: 20px;
-					margin-top: 30px;
-				}
-			}
-		}
-		&--center {
-			@include robotoBold {
-				@include sizeLine(24px, 30px);
-				text-align: center;
-			}
-			padding-top: 30px;
-			@include mediaTablet {
-				@include sizeLine(26px, 45px);
-				grid-area: title;
-				margin-top: 0;
-			}
-			@include mediaDesktop {
-				font-size: 32px;
-				padding-top: 60px;
-			}
-		}
-	}
-	&__purchase {
-		background-color: $color-bg-2;
-		&--button {
+		&--purchase {
 			width: 184px;
 			height: 45px;
 			background-color: $deco-brand;
@@ -137,41 +86,97 @@
 			}
 		}
 	}
-}
-.main__article {
-	&--title {
-		margin: 45px 68px 0;
+	&__title {
 		@include robotoBold {
-			@include sizeLine(18px, 30px);
-			text-align: center;
+			@include sizeLine(24px, 30px);
+			@include mediaTablet {
+				@include sizeLine(26px, 45px);
+			}
+			@include mediaDesktop {
+				font-size: 32px;
+			}
 		}
-		@include mediaTablet {
-			font-size: 24px;
-			margin-left: 0;
-			margin-right: 0;
+		&--small {
+			@include robotoRegular {
+				@include sizeLine(14px, 30px);
+				color: $light-brand;
+				@include mediaDesktop {
+					font-size: 16px;
+				}
+			}
+			margin-top: 30px;
 		}
-		@include mediaDesktop {
-			margin-top: 0;
+		&--center {
+			@include robotoBold {
+				@include sizeLine(24px, 30px);
+				text-align: center;
+			}
+			padding-top: 30px;
+			@include mediaTablet {
+				@include sizeLine(26px, 45px);
+				grid-area: title;
+				margin-top: 0;
+			}
+			@include mediaDesktop {
+				font-size: 32px;
+				padding-top: 60px;
+			}
 		}
 	}
-	&--paragraph {
-		margin: 0 70px;
+	&__paragraph {
 		@include robotoRegular {
 			@include sizeLine(18px, 30px);
-			text-align: center;
+			color: $color-text;
+			margin-top: 15px;
+			@include mediaTablet {
+				font-size: 20px;
+				margin-top: 30px;
+			}
 		}
-		@include mediaTablet {
-			font-size: 20px;
-			margin: 0 20px;
+	}	
+	&__article {
+		&--title {
+			margin: 45px 68px 0;
+			@include robotoBold {
+				@include sizeLine(18px, 30px);
+				text-align: center;
+			}
+			@include mediaTablet {
+				font-size: 24px;
+				margin-left: 0;
+				margin-right: 0;
+			}
+			@include mediaDesktop {
+				margin-top: 0;
+			}
+		}
+		&--paragraph {
+			margin: 0 70px;
+			@include robotoRegular {
+				@include sizeLine(18px, 30px);
+				text-align: center;
+			}
+			@include mediaTablet {
+				font-size: 20px;
+				margin: 0 20px;
+			}
+		}
+		&-1 {
+			grid-area: reason1;
+		}
+		&-2 {
+			grid-area: reason2;
+		}
+		&-3 {
+			grid-area: reason3;
 		}
 	}
-	&-1 {
-		grid-area: reason1;
+}
+.section {
+	&-tips {
+		background-color: $color-bg;
 	}
-	&-2 {
-		grid-area: reason2;
-	}
-	&-3 {
-		grid-area: reason3;
+	&-purchase {
+		background-color: $color-bg-2;		
 	}
 }
