@@ -8,12 +8,19 @@
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, -50%); //translate (x, y) x=0, y=0 es de donde se parte.
+	
 }
 .up:hover {
-	animation: up 0.8s 3;
+	animation: up 1.6s 3;
 }
 @keyframes up {
 	0% {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(360deg);
+	}
+	50% {
 		transform: translateY(0);
 	}
 	100% {
@@ -82,6 +89,7 @@
 		}
 		&--link {
 			padding: 5px 20px; //Mejor UX.
+			color: inherit;
 			&:hover {
 				transition: color $trans-bt;
 				color: $deco-brand;

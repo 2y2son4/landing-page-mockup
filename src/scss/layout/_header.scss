@@ -4,9 +4,7 @@
 	justify-content: flex-end;
 	align-items: center;
 	height: 100vh;
-	background: url("../images/cover.jpg") no-repeat;
-	background-size: cover;
-	background-position: center;
+	background: url("../images/cover.jpg") no-repeat center / cover fixed;
 	&__nav {
 		width: 44px;
 		height: 44px;
@@ -74,13 +72,19 @@
 	}
 }
 .--down {
-	animation: down 0.8s 3;
+	animation: down 1.6s 3;
 	&:hover {
-		animation: downHover 0.8s 3;
+		animation: downHover 1.6s 2;
 	}
 }
 @keyframes down {
 	0% {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(360deg);
+	}
+	50% {
 		transform: translateY(0);
 	}
 	100% {
@@ -89,6 +93,12 @@
 }
 @keyframes downHover {
 	0% {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(360deg);
+	}
+	50% {
 		transform: translateY(0);
 	}
 	100% {
