@@ -170,7 +170,26 @@
 	&-tips {
 		background-color: $color-bg;
 	}
+	&-pricing {
+		background-color: $dark-brand;
+		color: $color-bg;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@include mediaTablet {
+			flex-direction: row;
+			flex-wrap: wrap;
+			
+		}
+	}
 	&-purchase {
 		background-color: $color-bg-2;
 	}
+}
+.pricing-main-title {
+	width: 100%;
+}
+.pricing-title {
+	padding: 15px;
+	text-transform: capitalize;
 }
