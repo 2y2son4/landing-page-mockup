@@ -103,6 +103,7 @@
 			@include robotoRegular {
 				@include sizeLine(14px, 30px);
 				color: $light-brand;
+				text-transform: capitalize;				
 				@include mediaDesktop {
 					font-size: 16px;
 				}
