@@ -84,8 +84,8 @@
 		&--link {
 			padding: 5px 20px; //Mejor UX.
 			color: inherit;
-			&:hover {
-				transition: color $trans-bt;
+			transition: color $trans-bt;
+			&:hover {				
 				color: $deco-brand;
 			}
 		}
