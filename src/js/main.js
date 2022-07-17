@@ -6,7 +6,7 @@ const navToggle = document.querySelector('.js-hamburger-icon');
 const bars = document.querySelectorAll('.js-hamburger-bar');
 
 function toggleHamburger() {
-  bars.forEach((bar) => bar.classList.toggle('x'));
+  bars.forEach((bar) => bar.classList.toggle('close-icon'));
   hamburgerMenu.classList.toggle('hidden');
 }
 
