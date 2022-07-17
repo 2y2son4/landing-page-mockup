@@ -1,0 +1,1 @@
+"use strict";const hamburgerMenu=document.querySelector(".js-hamburger-menu"),navToggle=document.querySelector(".js-hamburger-icon"),bars=document.querySelectorAll(".js-hamburger-bar");function toggleHamburger(){bars.forEach((e=>e.classList.toggle("close-icon"))),hamburgerMenu.classList.toggle("hidden")}navToggle.addEventListener("click",toggleHamburger);
