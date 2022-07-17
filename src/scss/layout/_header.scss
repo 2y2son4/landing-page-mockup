@@ -135,9 +135,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transform: rotate(90deg);
   height: 22px;
   width: 22px;
+  @include mediaTablet {
+    transform: rotate(90deg);
+  }
 
   .hamburger__icon-bar {
     height: 4px;
