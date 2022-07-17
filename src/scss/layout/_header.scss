@@ -30,7 +30,7 @@
     color: $color-bg;
     margin-bottom: 10px;
     @include robotoBold {
-      @include sizeLine(42px, 55px);
+      @include sizeLine(42px, 54px);
       text-transform: uppercase;
       text-align: center;
     }
@@ -47,12 +47,14 @@
 
     &--span {
       display: block;
+      margin: 0 8px;
     }
   }
 
   &__subtitle {
     color: $color-bg;
-    margin-bottom: 45px;
+    margin: 0 8px 44px;
+    text-align: center;
     @include robotoRegular {
       font-size: 16px;
     }
@@ -72,6 +74,11 @@
 
     &--list {
       display: flex;
+      flex-direction: column;
+
+      @include mediaTablet {
+        flex-direction: row;
+      }
 
       &-item {
         display: flex;
@@ -100,7 +107,8 @@
   @include flexCenter;
   border-radius: 50%;
   background-color: $color-bg;
-  margin-bottom: 53px;
+  margin-bottom: 60px;
+
   @include mediaTablet {
     margin-bottom: 44px;
   }
@@ -132,7 +140,7 @@
   width: 22px;
 
   .hamburger__icon-bar {
-    height: 3px;
+    height: 4px;
     width: 100%;
     background-color: #ffffff;
     transition: all 100ms ease-in-out;
