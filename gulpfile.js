@@ -10,23 +10,24 @@ const gulp = require('gulp');
 const htmlInclude = require('gulp-html-tag-include');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
-const sass = require('gulp-sass');
+
+const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify-es').default;
 
 // secondary tasks
 
-gulp.task('api', done => {
+gulp.task('api', (done) => {
   gulp.src(config.api.src).pipe(gulp.dest(config.api.dest));
   done();
 });
 
-gulp.task('api-dist', done => {
+gulp.task('api-dist', (done) => {
   gulp.src(config.api.src).pipe(gulp.dest(config.api.dist));
   done();
 });
 
-gulp.task('bs-reload', done => {
+gulp.task('bs-reload', (done) => {
   browserSync.reload();
   done();
 });
@@ -35,7 +36,7 @@ gulp.task('clean', del.bind(null, [config.env.dev.dest]));
 
 gulp.task('clean-dist', del.bind(null, [config.env.producction.dest]));
 
-gulp.task('css', done => {
+gulp.task('css', (done) => {
   gulp
     .src(config.css.src)
     .pipe(sourcemaps.init())
@@ -49,7 +50,7 @@ gulp.task('css', done => {
   done();
 });
 
-gulp.task('css-dist', done => {
+gulp.task('css-dist', (done) => {
   gulp
     .src(config.css.src)
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
@@ -60,17 +61,17 @@ gulp.task('css-dist', done => {
   done();
 });
 
-gulp.task('html', done => {
+gulp.task('html', (done) => {
   gulp.src(config.html.src).pipe(htmlInclude()).pipe(gulp.dest(config.html.dest));
   done();
 });
 
-gulp.task('html-dist', done => {
+gulp.task('html-dist', (done) => {
   gulp.src(config.html.src).pipe(htmlInclude()).pipe(gulp.dest(config.html.dist));
   done();
 });
 
-gulp.task('images', done => {
+gulp.task('images', (done) => {
   gulp
     .src(config.images.src)
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
@@ -78,7 +79,7 @@ gulp.task('images', done => {
   done();
 });
 
-gulp.task('js', done => {
+gulp.task('js', (done) => {
   gulp
     .src(config.js.src)
     .pipe(sourcemaps.init())
@@ -90,7 +91,7 @@ gulp.task('js', done => {
   done();
 });
 
-gulp.task('js-dist', done => {
+gulp.task('js-dist', (done) => {
   gulp
     .src(config.js.src)
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
@@ -100,7 +101,7 @@ gulp.task('js-dist', done => {
   done();
 });
 
-gulp.task('images-dist', done => {
+gulp.task('images-dist', (done) => {
   gulp
     .src(config.images.src)
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
@@ -112,7 +113,7 @@ gulp.task('images-dist', done => {
 
 gulp.task(
   'default',
-  gulp.series(['clean', 'api', 'html', 'css', 'js', 'images'], done => {
+  gulp.series(['clean', 'api', 'html', 'css', 'js', 'images'], (done) => {
     browserSync.init({ server: { baseDir: './public/' } });
     gulp.watch(config.api.src, gulp.series(['api', 'bs-reload']));
     gulp.watch(config.css.src, gulp.series('css'));
@@ -132,9 +133,9 @@ gulp.task(
       'css-dist',
       'html-dist',
       'js-dist',
-      'images-dist'
+      'images-dist',
       // 'icons-dist'
     ],
-    done => done()
+    (done) => done()
   )
 );
