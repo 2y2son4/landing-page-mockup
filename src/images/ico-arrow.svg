@@ -1,12 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="21px" height="24px" viewBox="0 0 21 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-    <title>ico-arrow</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="up-btn" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-12.000000, -11.000000)">
-        <g fill="#F26002" fill-rule="nonzero" id="ico-arrow">
-            <path d="M12.5142857,22.4857143 C13.2,23.1714286 14.2285714,23.1714286 14.9142857,22.4857143 L20.5714286,16.8285714 L20.5714286,33.2857143 C20.5714286,34.3142857 21.2571429,35 22.2857143,35 C23.3142857,35 24,34.3142857 24,33.2857143 L24,16.8285714 L29.6571429,22.4857143 C30.3428571,23.1714286 31.3714286,23.1714286 32.0571429,22.4857143 C32.7428571,21.8 32.7428571,20.7714286 32.0571429,20.0857143 L23.4857143,11.5142857 C23.1428571,11.1714286 22.8,11 22.2857143,11 C21.7714286,11 21.4285714,11.1714286 21.0857143,11.5142857 L12.5142857,20.0857143 C11.8285714,20.7714286 11.8285714,21.8 12.5142857,22.4857143 Z"></path>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 21 24" style="enable-background:new 0 0 21 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#A68095;}
+</style>
+<title>ico-arrow</title>
+<desc>Created with Sketch.</desc>
+<g id="up-btn" transform="translate(-12.000000, -11.000000)">
+	<g id="ico-arrow">
+		<path class="st0" d="M12.5,22.5c0.7,0.7,1.7,0.7,2.4,0l5.7-5.7v16.5c0,1,0.7,1.7,1.7,1.7c1,0,1.7-0.7,1.7-1.7V16.8l5.7,5.7
+			c0.7,0.7,1.7,0.7,2.4,0s0.7-1.7,0-2.4l-8.6-8.6c-0.3-0.3-0.7-0.5-1.2-0.5c-0.5,0-0.9,0.2-1.2,0.5l-8.6,8.6
+			C11.8,20.8,11.8,21.8,12.5,22.5z"/>
+	</g>
+</g>
 </svg>
