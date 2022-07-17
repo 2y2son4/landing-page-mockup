@@ -1,104 +1,194 @@
 .header {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
-	height: 100vh;
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 25%, black), url("../images/cover.jpg") no-repeat center / cover fixed;
-	background-blend-mode: multiply;
-	&__nav {
-		width: 44px;
-		height: 44px;
-		background-color: $color-brand;
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 1;
-		@include flexCenter;
-	}
-	&__img {
-		transition: transform $trans-bt;
-		&:hover {
-			transform: rotate(360deg);
-		}
-	}
-	&__title {
-		color: $color-bg;
-		margin-bottom: 10px;
-		@include robotoBold {
-			@include sizeLine(42px, 55px);
-			text-transform: uppercase;
-			text-align: center;
-		}
-		@include mediaTablet {
-			margin-bottom: 20px;
-			@include sizeLine(80px, 106px);
-		}
-		@include mediaDesktop {
-			margin-bottom: 0px;
-			@include sizeLine(100px, 132px);
-		}
-		&--span {
-			display: block;
-		}
-	}
-	&__subtitle {
-		@include robotoRegular {
-			font-size: 16px;
-		}
-		color: $color-bg;
-		margin-bottom: 45px;
-		@include mediaTablet {
-			font-size: 24px;
-			margin-bottom: 30px;
-		}
-	}
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 25%, black),
+    url('../images/new-cover.jpg') no-repeat center / cover fixed;
+  background-blend-mode: multiply;
+
+  &__nav {
+    width: 44px;
+    height: 44px;
+    background-color: $color-brand;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    @include flexCenter;
+  }
+
+  &__img {
+    transition: transform $trans-bt;
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+
+  &__title {
+    color: $color-bg;
+    margin-bottom: 10px;
+    @include robotoBold {
+      @include sizeLine(42px, 55px);
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    @include mediaTablet {
+      margin-bottom: 20px;
+      @include sizeLine(80px, 106px);
+    }
+
+    @include mediaDesktop {
+      margin-bottom: 0px;
+      @include sizeLine(100px, 132px);
+    }
+
+    &--span {
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    @include robotoRegular {
+      font-size: 16px;
+    }
+
+    color: $color-bg;
+    margin-bottom: 45px;
+
+    @include mediaTablet {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__hamburger {
+    position: absolute;
+    top: 44px;
+    left: 44px;
+    padding: 24px;
+    background-color: #fff;
+
+    &--list {
+      display: flex;
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-link {
+        padding: 6px 20px;
+        margin: 12px 0;
+        color: $color-brand;
+        transition: color $trans-bt;
+        text-transform: uppercase;
+        @include robotoBold;
+
+        &:hover {
+          color: $deco-brand;
+        }
+      }
+    }
+  }
 }
+
 .nav__icon {
-	width: 45px;
-	height: 45px;
-	@include flexCenter;
-	border-radius: 50%;
-	background-color: $color-bg;
-	margin-bottom: 53px;
-	@include mediaTablet {
-		margin-bottom: 45px;
-	}
-	@include mediaDesktop {
-		margin-bottom: 13px;
-	}
-	&--down {
-		animation: down 1.6s 1;
-		&:hover {
-			animation: downHover 1.6s 1;
-		}
-	}
+  width: 44px;
+  height: 44px;
+  @include flexCenter;
+  border-radius: 50%;
+  background-color: $color-bg;
+  margin-bottom: 53px;
+  @include mediaTablet {
+    margin-bottom: 44px;
+  }
+  @include mediaDesktop {
+    margin-bottom: 12px;
+  }
+  &--down {
+    width: 30px;
+    animation: down 1.6s 1;
+    &:hover {
+      animation: downHover 1.6s 1;
+    }
+  }
 }
+
+.hidden {
+  display: none;
+}
+
+.hamburger__icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: rotate(90deg);
+  height: 22px;
+  width: 22px;
+
+  .hamburger__icon-bar {
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    transition: all 100ms ease-in-out;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.x {
+  &:nth-of-type(1) {
+    transition: all 100ms ease-in-out;
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 28px;
+  }
+
+  &:nth-of-type(2) {
+    transition: all 100ms ease-in-out;
+    transform-origin: center;
+    width: 0;
+  }
+
+  &:nth-of-type(3) {
+    transition: all 100ms ease-in-out;
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+    width: 28px;
+  }
+}
+
 @keyframes down {
-	0% {
-		transform: rotate(0);
-	}
-	25% {
-		transform: rotate(360deg);
-	}
-	50% {
-		transform: translateY(0);
-	}
-	100% {
-		transform: translateY(15px);
-	}
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(16px);
+  }
 }
+
 @keyframes downHover {
-	0% {
-		transform: rotate(0);
-	}
-	25% {
-		transform: rotate(360deg);
-	}
-	50% {
-		transform: translateY(0);
-	}
-	100% {
-		transform: translateY(15px);
-	}
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(16px);
+  }
 }

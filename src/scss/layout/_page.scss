@@ -1,181 +1,181 @@
 .main {
-	&__container {
-		&--insomnia {
-			margin: 0 15px;
-			@include mediaTablet {
-				margin: 0 40px;
-			}
-			@include mediaDesktop {
-				margin: 0 auto;
-				max-width: 1024px;
-			}
-		}
-		&--grid {
-			margin: 0 15px;
-			display: grid;
-			grid-template-columns: 1fr;
-			grid-template-rows: 70px 1fr 1fr 1fr 150px;
-			grid-template-areas: "title" "reason1" "reason2" "reason3" "button";
-			@include mediaTablet {
-				margin: 0 40px;
-				display: grid;
-				grid-template-columns: 1fr 1fr 1fr;
-				grid-template-rows: 75px 1fr 165px;
-				grid-template-areas: "title title title" "reason1 reason2 reason3" "button button button";
-			}
-			@include mediaDesktop {
-				margin: 0 auto;
-				grid-template-rows: 150px 1fr 165px;
-				max-width: 1024px;
-			}
-		}
-	}
-	&__button {
-		background-color: $color-bg;
-		&--tips {
-			width: 76px;
-			height: 45px;
-			@include robotoMedium {
-				@include sizeLine(20px, 45px);
-				color: $deco-brand;
-			}
-			background-color: $color-bg;
-			border: 2px $deco-brand solid;
-			border-radius: 22.5px;
-			margin: 30px 0 45px;
-			transform: scale(1);
-			transition: transform $trans-bt, color $trans-bt, border $trans-bt;
-			&:hover {
-				transform: scale(1.2);
-				color: $color-bg;
-				background-color: $dark-brand;
-				border: 2px $dark-brand solid;
-			}
-			@include mediaTablet {
-				width: 91px;
-				margin-bottom: 60px;
-			}
-			@include mediaDesktop {
-				width: 160px;
-			}
-		}
-		&--purchase {
-			width: 184px;
-			height: 45px;
-			background-color: $deco-brand;
-			border-radius: 22.5px;
-			transform: scale(1);
-			transition: transform $trans-bt, background-color $trans-bt;
-			border: 2px $deco-brand solid;
-			&:hover {
-				transform: scale(1.2);
-				background-color: $color-bg;
-				color: $dark-brand;
-				border: 2px $dark-brand solid;
-			}
-			margin: 45px auto 60px;
-			@include robotoMedium {
-				@include sizeLine(20px, 45px);
-				color: $color-bg;
-			}
-			@include mediaTablet {
-				width: 210px;
-				grid-area: button;
-				margin-top: 60px
-			}
-			@include mediaDesktop {
-				width: 255px;
-				
-			}
-		}
-	}
-	&__title {
-		@include robotoBold {
-			@include sizeLine(24px, 30px);
-			@include mediaTablet {
-				@include sizeLine(26px, 45px);
-			}
-			@include mediaDesktop {
-				font-size: 32px;
-			}
-		}
-		&--small {
-			@include robotoRegular {
-				@include sizeLine(14px, 30px);
-				color: $light-brand;
-				text-transform: capitalize;				
-				@include mediaDesktop {
-					font-size: 16px;
-				}
-			}
-			margin-top: 30px;
-			@include mediaDesktop {
-				margin-top: 60px;
-				font-size: 16px;
-			}
-		}
-		&--center {
-			@include robotoBold {
-				@include sizeLine(24px, 30px);
-				text-align: center;
-			}
-			margin-top: 30px;
-			@include mediaTablet {
-				@include sizeLine(26px, 45px);
-				grid-area: title;				
-			}
-			@include mediaDesktop {
-				font-size: 32px;
-				margin-top: 60px;
-			}
-		}
-	}
-	&__paragraph {
-		@include robotoRegular {
-			@include sizeLine(18px, 30px);
-			color: $color-text;
-			margin-top: 15px;
-			@include mediaTablet {
-				font-size: 20px;
-				margin-top: 30px;
-			}
-		}
-	}
-	&__article {
-		&--title {
-			margin-top: 45px;
-			@include robotoBold {
-				@include sizeLine(18px, 30px);
-				text-align: center;
-			}
-			@include mediaTablet {
-				font-size: 24px;
-				margin-left: 0;
-				margin-right: 0;
-				margin-bottom: 14px;
-			}
-			@include mediaDesktop {
-				margin-top: 0;
-			}
-		}
-		&--paragraph {
-			margin: 0 70px;
-			@include robotoRegular {
-				@include sizeLine(18px, 30px);
-				text-align: center;
-			}
-			@include mediaTablet {
-				font-size: 20px;
-				margin: 0 20px;
-			}
-		}
-	}
+  &__container {
+    &--insomnia {
+      margin: 0 14px;
+      @include mediaTablet {
+        margin: 0 40px;
+      }
+      @include mediaDesktop {
+        margin: 0 auto;
+        max-width: 1024px;
+      }
+    }
+    &--grid {
+      margin: 0 16px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 70px 1fr 1fr 1fr 150px;
+      grid-template-areas: 'title' 'reason1' 'reason2' 'reason3' 'button';
+      @include mediaTablet {
+        margin: 0 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 76px 1fr 166px;
+        grid-template-areas: 'title title title' 'reason1 reason2 reason3' 'button button button';
+      }
+      @include mediaDesktop {
+        margin: 0 auto;
+        grid-template-rows: 150px 1fr 166px;
+        max-width: 1024px;
+      }
+    }
+  }
+  &__button {
+    background-color: $color-bg;
+    &--tips {
+      width: 76px;
+      height: 46px;
+      @include robotoMedium {
+        @include sizeLine(20px, 46px);
+        color: $deco-brand;
+      }
+      background-color: $color-bg;
+      border: 2px $deco-brand solid;
+      border-radius: 24px;
+      margin: 32px 0 44px;
+      transform: scale(1);
+      transition: transform $trans-bt, color $trans-bt, border $trans-bt;
+      &:hover {
+        transform: scale(1.2);
+        color: $color-bg;
+        background-color: $dark-brand;
+        border: 2px $dark-brand solid;
+      }
+      @include mediaTablet {
+        width: 90px;
+        margin-bottom: 60px;
+      }
+      @include mediaDesktop {
+        width: 160px;
+      }
+    }
+    &--purchase {
+      width: 184px;
+      height: 44px;
+      background-color: $deco-brand;
+      border-radius: 24px;
+      transform: scale(1);
+      transition: transform $trans-bt, background-color $trans-bt;
+      border: 2px $deco-brand solid;
+      &:hover {
+        transform: scale(1.2);
+        background-color: $color-bg;
+        color: $dark-brand;
+        border: 2px $dark-brand solid;
+      }
+      margin: 44px auto 60px;
+      @include robotoMedium {
+        @include sizeLine(20px, 44px);
+        color: $color-bg;
+      }
+      @include mediaTablet {
+        width: 210px;
+        grid-area: button;
+        margin-top: 60px;
+      }
+      @include mediaDesktop {
+        width: 256px;
+      }
+    }
+  }
+  &__title {
+    @include robotoBold {
+      @include sizeLine(24px, 30px);
+      @include mediaTablet {
+        @include sizeLine(26px, 44px);
+      }
+      @include mediaDesktop {
+        font-size: 32px;
+      }
+    }
+    &--small {
+      @include robotoRegular {
+        @include sizeLine(14px, 30px);
+        color: $light-brand;
+        text-transform: capitalize;
+        @include mediaDesktop {
+          font-size: 16px;
+        }
+      }
+      margin-top: 30px;
+      @include mediaDesktop {
+        margin-top: 60px;
+        font-size: 16px;
+      }
+    }
+    &--center {
+      @include robotoBold {
+        @include sizeLine(24px, 30px);
+        text-align: center;
+      }
+      margin-top: 30px;
+      @include mediaTablet {
+        @include sizeLine(26px, 44px);
+        grid-area: title;
+      }
+      @include mediaDesktop {
+        font-size: 32px;
+        margin-top: 60px;
+      }
+    }
+  }
+  &__paragraph {
+    @include robotoRegular {
+      @include sizeLine(18px, 30px);
+      color: $color-text;
+      margin-top: 16px;
+      @include mediaTablet {
+        font-size: 20px;
+        margin-top: 30px;
+      }
+    }
+  }
+  &__article {
+    &--title {
+      margin-top: 44px;
+      @include robotoBold {
+        @include sizeLine(18px, 30px);
+        text-align: center;
+      }
+      @include mediaTablet {
+        font-size: 24px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 14px;
+      }
+      @include mediaDesktop {
+        margin-top: 0;
+      }
+    }
+    &--paragraph {
+      color: $color-text;
+      margin: 0 70px;
+      @include robotoRegular {
+        @include sizeLine(18px, 30px);
+        text-align: center;
+      }
+      @include mediaTablet {
+        font-size: 20px;
+        margin: 0 20px;
+      }
+    }
+  }
 }
 .section {
-	&-tips {
-		background-color: $color-bg;
-	}
-	&-purchase {
-		background-color: $color-bg-2;
-	}
+  &-tips {
+    background-color: $color-bg;
+  }
+  &-purchase {
+    background-color: $color-bg-2;
+  }
 }

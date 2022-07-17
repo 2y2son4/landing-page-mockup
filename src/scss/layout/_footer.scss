@@ -1,93 +1,98 @@
-.nav__icon--up {
-	width: 45px;
-	height: 45px;
-	border-radius: 50%;
-	background-color: $color-bg;
-	margin-bottom: 53px;
-	@include flexCenter;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%); //translate (x, y) x=0, y=0 es de donde se parte.
+.nav__icon {
+  &--up {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $color-bg;
+    margin-bottom: 53px;
+    @include flexCenter;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%); //translate (x, y) x=0, y=0 es de donde se parte.
+  }
+
+  &--img {
+    width: 28px;
+  }
 }
 .up:hover {
-	animation: up 1.6s 2;
+  animation: up 1.6s 2;
 }
 @keyframes up {
-	0% {
-		transform: rotate(0);
-	}
-	25% {
-		transform: rotate(360deg);
-	}
-	50% {
-		transform: translateY(0);
-	}
-	100% {
-		transform: translateY(-20px);
-	}
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 .footer {
-	&__container {
-		margin: 0 15px;
-		@include flexCenter;
-		flex-direction: column;
-		@include mediaTablet {
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: flex-start;
-			margin: 0 auto;
-			max-width: 600px;
-		}
-
-	}
-	&__copyright {
-		margin-top: 30px;
-		margin-bottom: 45px;
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		@include mediaTablet {
-			margin-top: 45px;
-			order: -1;
-		}
-		&--small {
-			@include sizeLine(14px, 30px);
-		}
-		&--icon {
-			color: $deco-brand;
-		}
-	}
-	background-color: $dark-brand;
-	color: $color-bg;
-	@include robotoRegular {
-		@include sizeLine(16px, 30px);
-	}
-	&__list {
-		text-transform: uppercase;
-		@include flexCenter;
-		flex-direction: column;
-		&--content {
-			padding-top: 60px;
-			@include mediaTablet {
-				padding-top: 0;
-				margin: 45px;
-				align-items: flex-start;
-			}
-		}
-		&--media {
-			margin-top: 30px;
-			@include mediaTablet {
-				margin-top: 45px;
-				align-items: flex-start;
-			}
-		}
-		&--link {
-			padding: 5px 20px; //Mejor UX.
-			color: inherit;
-			transition: color $trans-bt;
-			&:hover {				
-				color: $deco-brand;
-			}
-		}
-	}
+  &__container {
+    margin: 0 14px;
+    @include flexCenter;
+    flex-direction: column;
+    @include mediaTablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+  }
+  &__copyright {
+    margin-top: 30px;
+    margin-bottom: 44px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @include mediaTablet {
+      margin-top: 44px;
+      order: -1;
+    }
+    &--small {
+      @include sizeLine(14px, 30px);
+    }
+    &--icon {
+      color: $deco-brand;
+    }
+  }
+  background-color: $dark-brand;
+  color: $color-bg;
+  @include robotoRegular {
+    @include sizeLine(16px, 30px);
+  }
+  &__list {
+    text-transform: uppercase;
+    @include flexCenter;
+    flex-direction: column;
+    &--content {
+      padding-top: 60px;
+      @include mediaTablet {
+        padding-top: 0;
+        margin: 44px;
+        align-items: flex-start;
+      }
+    }
+    &--media {
+      margin-top: 30px;
+      @include mediaTablet {
+        margin-top: 44px;
+        align-items: flex-start;
+      }
+    }
+    &--link {
+      padding: 6px 20px;
+      color: inherit;
+      transition: color $trans-bt;
+      &:hover {
+        color: $deco-brand;
+      }
+    }
+  }
 }
